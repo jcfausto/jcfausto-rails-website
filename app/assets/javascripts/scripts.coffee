@@ -17,7 +17,8 @@
   fullscreen.style.backgroundImage = "url('assets/background-#{randomInt}@#{bgSize}.jpg')"
 
   # Async load images
-  document.querySelector('img.me').src = "assets/photo@#{imageSize}.jpg"
+  # TODO: Disconver why this not work at DigitalOcean
+  #document.querySelector('img.me').src = "assets/photo@#{imageSize}.jpg"
 
   # Menu
   menuItems = document.querySelectorAll 'header > nav ul li'
