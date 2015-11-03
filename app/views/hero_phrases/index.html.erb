@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Hero Phrases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hero_phrases.each do |hero_phrase| %>
+      <tr>
+        <td><%= hero_phrase.text %></td>
+        <td><%= link_to 'Show', hero_phrase %></td>
+        <td><%= link_to 'Edit', edit_hero_phrase_path(hero_phrase) %></td>
+        <td><%= link_to 'Destroy', hero_phrase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hero phrase', new_hero_phrase_path %>

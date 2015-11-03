@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @about.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @about.description %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @about.order %>
+</p>
+
+<%= link_to 'Edit', edit_about_path(@about) %> |
+<%= link_to 'Back', abouts_path %>

@@ -1,0 +1,2 @@
+module HeroPhrasesHelper
+end

@@ -1,0 +1,37 @@
+I"Ð
+/*
+AboutItem React Component
+Released under the MIT License
+Date: 10-26-2015
+Author: Julio Cesar Fausto
+Source: https://github.com/jcfausto/jcfausto-com-rails
+ */
+
+(function() {
+  this.AboutItem = React.createClass({
+    getInitialState: function() {
+      return {
+        title: this.props.title,
+        description: this.props.description,
+        order: this.props.order
+      };
+    },
+    rawMarkup: function() {
+      return {
+        __html: marked(this.state.description, {
+          sanitize: true
+        })
+      };
+    },
+    render: function() {
+      return <li>
+      <p>
+        <span>{this.state.title}</span>
+        <span>{this.rawMarkup()}</span>
+      </p>
+    </li>;
+    }
+  });
+
+}).call(this);
+:ET

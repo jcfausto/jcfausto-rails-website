@@ -1,0 +1,31 @@
+I"…
+/*
+Phrase Shuffler React Component
+Released under the MIT License
+Date: 11-02-2015
+Author: Julio Cesar Fausto
+Source: https://github.com/jcfausto/react-phrase-shuffler-component
+ */
+
+(function() {
+  this.PhraseShuffler = React.createClass({
+    getInitialState: function() {
+      return {
+        phrases: this.props.phrases
+      };
+    },
+    getDefaultProps: function() {
+      return {
+        current_phrase: "Shuffler"
+      };
+    },
+    shuffle: function() {
+      return this.state.current_phrase = "Current shuffle";
+    },
+    render: function() {
+      return <h1>Phrase Shuffler - {this.shuffle}</h1>;
+    }
+  });
+
+}).call(this);
+:ET

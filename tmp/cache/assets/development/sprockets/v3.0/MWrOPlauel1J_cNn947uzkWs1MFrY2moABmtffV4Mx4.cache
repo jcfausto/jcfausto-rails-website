@@ -1,0 +1,60 @@
+I"
+/*
+Phrase Shuffler React Component
+Released under the MIT License
+Date: 11-02-2015
+Author: Julio Cesar Fausto
+Source: https://github.com/jcfausto/react-phrase-shuffler-component
+ */
+
+(function() {
+  this.PhraseShuffler = React.createClass({
+    getInitialState: function() {
+      ({
+        phrases: this.props.phrases
+      });
+      this.shuffle();
+      return {
+        lastIndex: -1
+      };
+    },
+    nextIndex: function() {
+      this.state.lastIndex += 1;
+      if (this.state.lastIndex >= this.state.phrases.length) {
+        this.state.lastIndex = 0;
+      }
+      return this.state.lastIndex;
+    },
+    fadeOut: function() {
+      var titleElement;
+      titleElement = document.querySelector('.hero h2:last-child');
+      titleElement.style.opacity = 0;
+      return setTimeout(this.fadeIn, 250);
+    },
+    fadeIn: function() {
+      var titleElement;
+      titleElement = document.querySelector('.hero h2:last-child');
+      titleElement.innerHTML = this.state.phrases[this.nextIndex()];
+      titleElement.style.opacity = 1;
+      return setTimeout(this.fadeOut, 2750);
+    },
+    shuffle: function() {
+      var i, j, results, x;
+      i = this.state.phrases.length;
+      results = [];
+      while (i) {
+        j = Math.floor(Math.random() * i);
+        x = this.state.phrases[--i];
+        this.state.phrases[i] = this.state.phrases[j];
+        results.push(this.state.phrases[j] = x);
+      }
+      return results;
+    },
+    render: function() {
+      this.fadeIn();
+      return <h1>teste</h1>;
+    }
+  });
+
+}).call(this);
+:ET
