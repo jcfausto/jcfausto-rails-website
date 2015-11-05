@@ -1,4 +1,5 @@
 class HeroPhrasesController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_hero_phrase, only: [:show, :edit, :update, :destroy]
 
   # GET /hero_phrases

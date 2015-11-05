@@ -52,3 +52,5 @@ end
 gem 'bourbon'
 gem 'neat'
 gem 'react-rails', github: 'reactjs/react-rails'
+
+gem 'devise'
