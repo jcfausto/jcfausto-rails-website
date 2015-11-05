@@ -14,7 +14,9 @@
   # Choose a header background
   randomInt = Math.floor(Math.random() * 4 + 1)
   fullscreen = document.querySelector '.page-header'
-  fullscreen.style.backgroundImage = "url('assets/background-#{randomInt}@#{bgSize}.jpg')"
+  backgroundImageUrl = image_path("background-#{randomInt}@#{bgSize}.jpg")
+
+  fullscreen.style.backgroundImage = "url('#{backgroundImageUrl}')"
 
   # Async load images
   # TODO: Disconver why this not work at DigitalOcean

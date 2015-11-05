@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
+//= require images
 //= require components
 //= require_tree ../../../vendor/assets/javascripts/.
