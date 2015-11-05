@@ -16,5 +16,7 @@
 
   <%= yield %>
 
+  <!-- Google Analytics -->
+  <%= analytics_init if Rails.env.production? %>
 </body>
 </html>
