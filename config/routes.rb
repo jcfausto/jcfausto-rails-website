@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :skills
   devise_for :admins, :skip => :registrations
   resources :hero_phrases
   resources :hero_phrases
