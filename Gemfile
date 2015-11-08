@@ -47,6 +47,8 @@ group :development, :test do
 
   # for debugging
   gem 'better_errors'
+
+  gem 'seed_dump', '~> 3.2', '>= 3.2.2'
 end
 
 gem 'bourbon'
