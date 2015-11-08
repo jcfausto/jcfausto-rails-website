@@ -56,3 +56,6 @@ gem 'react-rails', github: 'reactjs/react-rails'
 gem 'devise'
 
 gem 'google-analytics-rails'
+
+#To add images do projects
+gem "paperclip", "~> 4.3"
