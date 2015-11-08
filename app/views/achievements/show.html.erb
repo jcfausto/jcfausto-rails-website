@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>When:</strong>
+  <%= @achievement.when %>
+</p>
+
+<p>
+  <strong>What:</strong>
+  <%= @achievement.what %>
+</p>
+
+<%= link_to 'Edit', edit_achievement_path(@achievement) %> |
+<%= link_to 'Back', achievements_path %>

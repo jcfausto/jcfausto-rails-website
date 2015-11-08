@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :achievements
   resources :projects
   resources :skills
   devise_for :admins, :skip => :registrations
