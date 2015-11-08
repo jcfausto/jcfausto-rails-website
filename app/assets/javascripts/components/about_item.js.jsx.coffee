@@ -12,9 +12,6 @@ Source: https://github.com/jcfausto/jcfausto-com-rails
     description: this.props.description
     order: this.props.order
 
-  rawMarkup: ->
-    { __html: marked(this.state.description, {sanitize: true}) }
-
   #I am using the raw html here because one could create anchors inside
   #about description and in order to this work it was necessary to output
   #the raw value of this property.
