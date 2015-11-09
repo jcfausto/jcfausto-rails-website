@@ -20,7 +20,7 @@ About.create!([
   {title: "EARLY LIFE", description: "Read more about my endevours on my old blog, <a href=\"http://ludworks.com/easypress/blog\" target=\"_blank\">right here.</a>", order: 4}
 ])
 Achievement.create!([
-  {when: "2015-11-02 00:00:00", what: "Lauched this website built with Rails <a href=\"jcfausto.com\" target=\"_blank\">jcfausto.com</a>"},
+  {when: "2015-11-02 00:00:00", what: "Lauched this website built with Rails <a href=\"http://jcfausto.com\" target=\"_blank\">jcfausto.com</a>"},
   {when: "2015-09-20 00:00:00", what: "Scored 7.0 at IELTs"},
   {when: "2015-07-01 00:00:00", what: "Launched an iPhone app for book readers called <a href=\"http://manypagesapp.com/\" target=\"_blank\">ManyPagesApp</a>"},
   {when: "2015-02-02 00:00:00", what: "Certified as <a href=\"https://www.scaledagileframework.com/\" target=\"_blank\">SAFe Agilist (SA)</a>"}
