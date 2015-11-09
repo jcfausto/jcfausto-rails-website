@@ -1,6 +1,16 @@
+ActiveRecord::Base.establish_connection
+ActiveRecord::Base.connection.tables.each do |table|
+  next if table == 'schema_migrations'
+
+  # MySQL and PostgreSQL
+  ActiveRecord::Base.connection.execute("TRUNCATE #{table}")
+
+  # SQLite
+  # ActiveRecord::Base.connection.execute("DELETE FROM #{table}")
+end
+
 Admin.create!([
   {email: "hello@jcfausto.com", encrypted_password: "$2a$10$Za7G1GU9VVxs8hCp0ocfQeo6FIXQXKI.DlKkQLfsQd26HkV6tjR3O", sign_in_count: 7, current_sign_in_at: "2015-11-08 17:08:00", last_sign_in_at: "2015-11-08 13:05:34", current_sign_in_ip: "::1", last_sign_in_ip: "::1", failed_attempts: 0, unlock_token: nil, locked_at: nil},
-  {email: "hello@jcfausto.com", encrypted_password: "$2a$10$NF/dub4DFZG2OE3VKFr/.e5V7mFbFXQW.FEcNBRDsxjvTr6wOHvDa", sign_in_count: 1, current_sign_in_at: "2015-11-09 20:52:00", last_sign_in_at: "2015-11-09 20:52:00", current_sign_in_ip: "::1", last_sign_in_ip: "::1", failed_attempts: 0, unlock_token: nil, locked_at: nil}
 ])
 About.create!([
   {title: "WHO I AM", description: "I’m an a software engineer & team builder from Brazil, passionate about code, design, startups, technology and developing people, including myself. I like science, travelling, sports and films.", order: 0},
