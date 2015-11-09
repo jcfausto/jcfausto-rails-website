@@ -10,7 +10,7 @@ ActiveRecord::Base.connection.tables.each do |table|
 end
 
 Admin.create!([
-  {email: "hello@jcfausto.com", encrypted_password: "$2a$10$Za7G1GU9VVxs8hCp0ocfQeo6FIXQXKI.DlKkQLfsQd26HkV6tjR3O", sign_in_count: 7, current_sign_in_at: "2015-11-08 17:08:00", last_sign_in_at: "2015-11-08 13:05:34", current_sign_in_ip: "::1", last_sign_in_ip: "::1", failed_attempts: 0, unlock_token: nil, locked_at: nil},
+  {email: "hello@jcfausto.com", encrypted_password: "$2a$10$Za7G1GU9VVxs8hCp0ocfQeo6FIXQXKI.DlKkQLfsQd26HkV6tjR3O", sign_in_count: 8, current_sign_in_at: "2015-11-09 21:42:14", last_sign_in_at: "2015-11-08 17:08:00", current_sign_in_ip: "::1", last_sign_in_ip: "::1", failed_attempts: 0, unlock_token: nil, locked_at: nil}
 ])
 About.create!([
   {title: "WHO I AM", description: "I’m an a software engineer & team builder from Brazil, passionate about code, design, startups, technology and developing people, including myself. I like science, travelling, sports and films.", order: 0},
@@ -20,10 +20,11 @@ About.create!([
   {title: "EARLY LIFE", description: "Read more about my endevours on my old blog, <a href=\"http://ludworks.com/easypress/blog\" target=\"_blank\">right here.</a>", order: 4}
 ])
 Achievement.create!([
-  {when: "2015-11-02 00:00:00", what: "Lauched this website built with Rails <a href=\"http://jcfausto.com\" target=\"_blank\">jcfausto.com</a>"},
   {when: "2015-09-20 00:00:00", what: "Scored 7.0 at IELTs"},
   {when: "2015-07-01 00:00:00", what: "Launched an iPhone app for book readers called <a href=\"http://manypagesapp.com/\" target=\"_blank\">ManyPagesApp</a>"},
-  {when: "2015-02-02 00:00:00", what: "Certified as <a href=\"https://www.scaledagileframework.com/\" target=\"_blank\">SAFe Agilist (SA)</a>"}
+  {when: "2015-02-02 00:00:00", what: "Certified as <a href=\"https://www.scaledagileframework.com/\" target=\"_blank\">SAFe Agilist (SA)</a>"},
+  {when: "2015-11-09 00:00:00", what: "Translated the English version of Michael James' <a href=\"http://scrummasterchecklist.org/\" target=\"_blank\">ScrumMaster Checklist</a> to brazilian portuguese. Merged pull request <a href=\"https://github.com/nerds-odd-e/scrummaster-checklist/pull/5\" target=\"_blank\">here</a> "},
+  {when: "2015-11-02 00:00:00", what: "Launched this website built with Rails <a href=\"http://jcfausto.com\" target=\"_blank\">jcfausto.com</a>"}
 ])
 HeroPhrase.create!([
   {text: "RAILS DEVELOPER"},
