@@ -32,4 +32,6 @@ Source: https://github.com/jcfausto/jcfausto-com-rails
         })
       }
 
+      <p className="more-portfolio">See more code on <a href="https://github.com/jcfausto" target="_blank">GitHub</a> and some designs on <a href="https://www.behance.net/jcfausto" target="_blank">Bēhance</a>.</p>
+
       </section>`
