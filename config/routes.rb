@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/setup', as: 'rails_admin'
   resources :achievements
   resources :projects
   resources :skills
@@ -11,7 +12,6 @@ Rails.application.routes.draw do
     patch 'admins' => 'devise/registrations#update', :as => 'admin_registration'
   end
 
-  resources :hero_phrases
   resources :hero_phrases
   resources :abouts
   root 'pages#home'

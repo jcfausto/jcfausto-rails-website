@@ -35,3 +35,10 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+#Compiled assets
+/public/assets/
+/public/system/
+
+#Mac files
+.DS_Store
