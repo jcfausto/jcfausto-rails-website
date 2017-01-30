@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.7.1'
 
 # Define the name of the application
 set :application, 'jcfausto-com'
@@ -30,7 +30,7 @@ set :format, :pretty
      on roles(:app), in: :sequence, wait: 5 do
        # Your restart mechanism here, for example:
        # execute :touch, release_path.join('tmp/restart.txt')
-       execute ". /home/rails/jcfausto-rails-website/post-deploy.sh"
+       # execute ". /home/rails/jcfausto-rails-website/post-deploy.sh"
      end
    end
 
