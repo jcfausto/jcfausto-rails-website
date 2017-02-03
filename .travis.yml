@@ -1,9 +1,6 @@
 language:  ruby
 rvm:
-  - 2.2.3p173
-  - rbx-2
+  - 2.2.3
 before_install:
 - openssl aes-256-cbc -K $encrypted_8f8c45d03da0_key -iv $encrypted_8f8c45d03da0_iv
   -in digital-ocean-deployer-key.enc -out digital-ocean-deployer-key -d
-- rvm get stable --auto-dotfiles
-- rvm install 2.2.3p173
