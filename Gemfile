@@ -35,9 +35,6 @@ group :production do
   gem 'unicorn'
 end
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -52,6 +49,9 @@ group :development, :test do
   gem 'better_errors'
 
   gem 'seed_dump', '~> 3.2', '>= 3.2.2'
+
+  # Use Capistrano for deployment
+  gem 'capistrano-rails'
 end
 
 gem 'bourbon' 
