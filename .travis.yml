@@ -13,3 +13,5 @@ script:
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database "jcfausto-com_test"' -U postgres
+after_success:
+  - bash lib/scripts/deploy.sh
