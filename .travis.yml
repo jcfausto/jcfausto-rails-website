@@ -1,20 +1,21 @@
-language:  ruby
+language: ruby
 rvm:
-  - 2.2.3
+- 2.2.3
 services:
-  - postgresql
+- postgresql
 before_install:
-  - openssl aes-256-cbc -K $encrypted_8f8c45d03da0_key -iv $encrypted_8f8c45d03da0_iv -in digital-ocean-deployer-key.enc -out digital-ocean-deployer-key -d
-  - rm digital-ocean-deployer-key.enc
-  - chmod 600 digital-ocean-deployer-key
-  - mv digital-ocean-deployer-key ~/.ssh/id_rsa
+- openssl aes-256-cbc -K $encrypted_8f8c45d03da0_key -iv $encrypted_8f8c45d03da0_iv
+  -in digital-ocean-deployer-key.enc -out digital-ocean-deployer-key -d
+- rm digital-ocean-deployer-key.enc
+- chmod 600 digital-ocean-deployer-key
+- mv digital-ocean-deployer-key ~/.ssh/id_rsa
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rake
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rake
 before_script:
-  - cp config/database.yml.travis config/database.yml
-  - psql -c 'create database "jcfausto-com_test"' -U postgres
-  - echo -e "Host jcfausto.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- cp config/database.yml.travis config/database.yml
+- psql -c 'create database "jcfausto-com_test"' -U postgres
+- echo -e "Host jcfausto.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
-  - bash lib/scripts/deploy.sh
+- bash lib/scripts/deploy.sh
