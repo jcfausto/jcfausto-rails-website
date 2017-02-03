@@ -13,5 +13,6 @@ script:
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database "jcfausto-com_test"' -U postgres
+  - echo -e "Host jcfausto.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
   - bash lib/scripts/deploy.sh
