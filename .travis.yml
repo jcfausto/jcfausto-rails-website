@@ -4,8 +4,7 @@ rvm:
 services:
   - postgresql
 before_install:
-- openssl aes-256-cbc -K $encrypted_8f8c45d03da0_key -iv $encrypted_8f8c45d03da0_iv
-  -in digital-ocean-deployer-key.enc -out digital-ocean-deployer-key -d
+  - openssl aes-256-cbc -K $encrypted_8f8c45d03da0_key -iv $encrypted_8f8c45d03da0_iv -in digital-ocean-deployer-key.enc -out digital-ocean-deployer-key -d
   - rm digital-ocean-deployer-key.enc
   - chmod 600 digital-ocean-deployer-key
   - mv digital-ocean-deployer-key ~/.ssh/id_rsa
