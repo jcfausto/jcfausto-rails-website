@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #to avoid safe_yaml loading error
 gem 'psych'
+gem 'syck'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
