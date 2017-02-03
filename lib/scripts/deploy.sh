@@ -4,7 +4,7 @@ if [ $TRAVIS_BRANCH == 'master' ] ; then
     # Initialize a new git repo and push it to our server.
     git init
         
-    git remote add deploy "deploye@jcfausto-com:/home/rails/jcfausto-rails-website"
+    git remote add deploy "deploye@jcfausto.com:/home/rails/jcfausto-rails-website"
     git config user.name "Travis CI"
     git config user.email "jcfausto@gmail.com"
     
