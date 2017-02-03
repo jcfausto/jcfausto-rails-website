@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 #to avoid safe_yaml loading error
+gem 'safe_yaml' 
 gem 'psych'
 gem 'syck'
 
