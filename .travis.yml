@@ -11,4 +11,5 @@ script:
   - bundle exec rake db:test:prepare
   - bundle exec rake
 before_script:
+  - cp config/database.yml.travis config/database.yml
   - psql -c 'create database "jcfausto-com_test"' -U postgres
