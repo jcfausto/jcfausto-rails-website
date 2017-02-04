@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '5.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -50,7 +50,7 @@ group :development, :test do
   # for debugging
   gem 'better_errors'
 
-  gem 'seed_dump', '~> 3.2', '>= 3.2.2'
+  gem 'seed_dump'
 
   # Use Capistrano for deployment
   gem 'capistrano-rails'
