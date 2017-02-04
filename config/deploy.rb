@@ -41,6 +41,7 @@ set :format, :pretty
        # Here we can do anything such as:
         within release_path do
           #execute :rake, 'cache:clear'
+          execute 'sudo systemctl restart unicorn.service'
           execute 'sudo systemctl restart nginx.service'
         end
      end
