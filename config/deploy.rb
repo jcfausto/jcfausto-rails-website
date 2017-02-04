@@ -10,7 +10,7 @@ set :scm, :git
 set :repo_url, 'https://github.com/jcfausto/jcfausto-rails-website.git'
 
 # Define where to put your application code
-set :deploy_to, "/home/rails/jcfausto-rails-website"
+set :deploy_to, "/home/rails/www/jcfausto-rails-website"
 
 set :pty, true
 
@@ -41,8 +41,7 @@ set :format, :pretty
        # Here we can do anything such as:
         within release_path do
           #execute :rake, 'cache:clear'
-          execute 'sudo service unicorn restart'
-          execute 'sudo service nginx reload'
+          execute 'sudo systemctl restart nginx.service'
         end
      end
    end
