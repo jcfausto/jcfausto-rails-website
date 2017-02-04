@@ -4,11 +4,12 @@ rvm:
 services:
 - postgresql
 before_install:
+- echo -e "Host jcfausto.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - openssl aes-256-cbc -K $encrypted_5cdc469a064a_key -iv $encrypted_5cdc469a064a_iv
   -in do_jcfrails_deploy.enc -out do_jcfrails_deploy -d
-- rm digital-ocean-deployer-key.enc
-- chmod 600 digital-ocean-deployer-key
-- mv digital-ocean-deployer-key ~/.ssh/id_rsa
+- rm do_jcfrails_deploy.enc
+- chmod 600 do_jcfrails_deploy
+- mv do_jcfrails_deploy ~/.ssh/do_jcfrails_deploy
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
@@ -16,6 +17,5 @@ script:
 before_script:
 - cp config/database.yml.travis config/database.yml
 - psql -c 'create database "jcfausto-com_test"' -U postgres
-- echo -e "Host jcfausto.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
-- bash lib/scripts/deploy.sh
+- [[ $TRAVIS_BRANCH = 'master' ]] && bundle exec cap deploy
