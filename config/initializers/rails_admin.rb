@@ -38,4 +38,18 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+
+  #Enabling ckeditor to edit post's body
+  config.model Post do
+    edit do
+      # For RailsAdmin >= 0.5.0
+      field :title
+      field :body, :ck_editor
+      # For RailsAdmin < 0.5.0
+      # field :description do
+      #   ckeditor true
+      # end
+    end
+  end
 end

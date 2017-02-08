@@ -15,6 +15,9 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
+//= require bootstrap-sprockets
 //= require images
 //= require components
 //= require_tree ../../../vendor/assets/javascripts/.
+//= require rails_admin/custom/ckeditor_ajax
+//= require ckeditor/init

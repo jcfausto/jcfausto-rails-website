@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+  resources :posts
   mount RailsAdmin::Engine => '/setup', as: 'rails_admin'
   resources :achievements
   resources :projects
