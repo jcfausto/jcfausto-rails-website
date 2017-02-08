@@ -44,13 +44,13 @@ set :format, :pretty
           execute 'sudo systemctl stop nginx.service'
           execute 'sudo systemctl stop unicorn.service'
 
-          execute 'cp /home/rails/www/.unicorn.sh .'
+          execute 'cp /home/rails/www/.unicorn.sh cd /home/rails/www/jcfausto-rails-website/current'
 
           #Will install the gems inside vendor/bundle
           #http://bundler.io/v1.5/man/bundle-config.1.html
-          execute 'RAILS_ENV=production bundle install --deployment'
-          execute 'RAILS_ENV=production bundle exec rake db:migrate'
-          execute 'RAILS_ENV=production bundle exec rake assets:precompile'
+          execute 'cd /home/rails/www/jcfausto-rails-website/current && RAILS_ENV=production bundle install --deployment'
+          execute 'cd /home/rails/www/jcfausto-rails-website/current && RAILS_ENV=production bundle exec rake db:migrate'
+          execute 'cd /home/rails/www/jcfausto-rails-website/current && RAILS_ENV=production bundle exec rake assets:precompile'
           
           execute 'sudo systemctl restart nginx.service'
           execute 'sudo systemctl restart unicorn.service'
