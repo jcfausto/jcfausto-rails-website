@@ -72,7 +72,6 @@ gem "paperclip", "~> 4.3"
 #For editing posts
 gem 'ckeditor'
 gem 'simple_form'
-gem 'bootstrap-sass'
 
 #https://github.com/nono/HTML-Truncator
 #This gem is used to truncate html for post exerpts (see the post model)

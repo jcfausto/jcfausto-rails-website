@@ -11,7 +11,7 @@ Source: https://github.com/jcfausto/jcfausto-com-rails
     posts: this.props.posts
 
   render: ->
-    `<section id="posts">
+    `<section className="posts">
 
       <ul className="post-list">
         {this.state.posts.map(
