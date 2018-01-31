@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 #to avoid safe_yaml loading error
-gem 'safe_yaml' 
+gem 'safe_yaml'
 gem 'psych'
 gem 'syck'
 
@@ -56,7 +56,7 @@ group :development, :test do
   gem 'capistrano-rails'
 end
 
-gem 'bourbon' 
+gem 'bourbon'
 gem 'neat'
 gem 'react-rails', github: 'reactjs/react-rails'
 
@@ -67,4 +67,4 @@ gem 'devise'
 gem 'google-analytics-rails'
 
 #To add images do projects
-gem "paperclip", "~> 4.3"
+gem "paperclip", "~> 5.2.1"
